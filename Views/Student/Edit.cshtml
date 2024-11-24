@@ -1,0 +1,28 @@
+﻿@model Student
+@{
+}
+
+
+<h2>Edit Student</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <input type="text" class="form-control" name="Name" id="Name" value="@Model.Name" />
+        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" class="form-control" name="Email" id="Email" value="@Model.Email" />
+        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+@* This ensures jQuery Validation is enabled for this form *@
+@section Scripts {
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+

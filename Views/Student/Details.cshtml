@@ -1,0 +1,15 @@
+﻿
+@{
+}
+@model Student
+
+<h2>Student Details</h2>
+
+<div>
+    <strong>Name:</strong> @Model.Name
+</div>
+<div>
+    <strong>Email:</strong> @Model.Email
+</div>
+
+<a href="@Url.Action("Index", "Student")">Back to List</a>

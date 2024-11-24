@@ -1,0 +1,35 @@
+﻿
+@{
+}
+@model IEnumerable<Student>
+
+<h2>Student List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Name</td>
+                <td>@student.Email</td>
+                <td>
+                    <a href="@Url.Action("Details", "Student", new { id = student.Id })">Details</a> |
+                    <a href="@Url.Action("Edit", "Student", new { id = student.Id })">Edit</a> |
+                    <form action="@Url.Action("Delete", "Student")" method="post" style="display:inline;">
+                        <input type="hidden" name="id" value="@student.Id" />
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Create", "Student")">Add New Student</a>
