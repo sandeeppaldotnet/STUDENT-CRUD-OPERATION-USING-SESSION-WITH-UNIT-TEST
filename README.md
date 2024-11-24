@@ -36,7 +36,7 @@ Follow these steps to get the project up and running locally:
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/yourusername/student-crud-operation-using-session-state-in-aspnet-core-mvc.git
+    git clone https://github.com/sandeeppaldotnet/STUDENT-CRUD-OPERATION-USING-SESSION-WITH-UNIT-TEST.GIT
     cd student-crud-operation-using-session-state-in-aspnet-core-mvc
     ```
 
